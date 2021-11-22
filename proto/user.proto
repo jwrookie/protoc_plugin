@@ -1,0 +1,11 @@
+syntax = "proto3";
+package protoc_plugin.proto;
+option go_package = "github.com/jw/protoc_plugin/proto;proto";
+
+import "cmd/protoc-gen-jwtest/proto/jwtest.proto";
+
+message User {
+  option (jwtest.option_field) = 100;
+  string name = 1;
+  uint64 age  = 2;
+}
